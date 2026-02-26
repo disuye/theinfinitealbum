@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMPLR</title>
+  <link rel="stylesheet" href="./assets/css/video.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="./assets/favicon/site.webmanifest">
-  <link rel="stylesheet" href="./assets/css/video.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;600&display=swap">
@@ -18,7 +18,7 @@
 <body>
   <div class="title">
     <!-- <img class="logo" src="../assets/images/smplr-tia.png"> -->
-        <div class="videoframe">
+        <div id="flipped" class="videoframe">
           <div class="smplr-embed" id="smplr">
             <div class="smplr-loading" id="smplrLoading">
             <span>LOADING STREAM …</span>
@@ -41,12 +41,16 @@
   </div>
   </div>
   </div>
-  <div class="content">
+  <div id="flopped" class="content">
+    <span>Continuously generated algorithmic music coded by one human.</span>
+    <span>Inspired by Dadaism, Pratītyasamutpāda, Amplituhedron, cut-up and dub.</span>
+    <span>This exists, then that exists. Emergent. Enjoy!</span>
   </div>
   <div class="links">
     <a href="https://youtube.com/@theinfinitealbum">YouTube</a>
     <a href="https://instagram.com/theinfinitealbum">Instagram</a>
     <a href="https://smplr.bandcamp.com/">Bandcamp</a>
+    <a id="flipper" href="#">About</a>
   </div>
   <div class="background"></div>
 </body>

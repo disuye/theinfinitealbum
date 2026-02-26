@@ -3,6 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
+@font-face {
+    font-family: "Fira Code";
+    src: url('https://disuye.com/fonts/FiraCode-VariableFont_wght.woff2') format('woff2-variations'),
+     	 url('https://disuye.com/fonts/FiraCode-VariableFont_wght.ttf') format('truetype-variations');
+	font-weight: 100 200 300 400 500 600 700 800 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
   --bg-color: transparent;
   --glitch-bg-color: var(--bg-color);
@@ -52,7 +61,6 @@ body {
 
 .videoframe {
   display: block;
-  opacity: 1.0;
   border-radius: 1.0rem;
   text-align: center;
   width: 100vw;
@@ -76,7 +84,6 @@ body {
     font-weight: normal;
     font-size: var(--h1-font-size);
     letter-spacing: -1vw;
-    transform: translate(0%, 10vw);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -95,6 +102,50 @@ body {
   word-break: keep-all;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.4);
+}
+
+.content {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: calc(100vw - 2.0rem);
+}
+
+.content span {
+  padding: 0.5rem 4.0rem;
+  max-width: 1080px;
+  margin: auto;
+  opacity: 0.0;
+  display: block;
+  text-align: left;
+  color: #FFFFFF;
+  font-family: 'Fira Code', monospace;
+  font-weight: 100;
+  font-size: 0.93rem;
+  text-transform: initial !important;
+  word-break: keep-all;
+}
+
+@media screen and (min-width: 1080px) {
+  .content span {
+    padding-left: calc(50vw - 540px + 5.0rem);
+    font-size: 1.2rem;
+  }  
+}
+
+#flipped div,
+#flopped span {
+  transition: all 300ms ease-in-out;
+}
+
+body:has(#flipper:hover) #flipped div {
+  opacity: 0.1;
+}
+
+body:has(#flipper:hover) #flopped span {
+  opacity: 1.0;
 }
 
 .japanese,
