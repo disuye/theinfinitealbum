@@ -27,17 +27,18 @@ body {
 
 .background {
   display: block;
-  width: 100vw;
+  width: 66vw;
+  max-width: 800px;
   height: 100vh;
   opacity: 1.0;
   mix-blend-mode: screen;
   position: fixed;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -33%);
   z-index: -1;
   background: url('../../assets/images/smplr-tia.png') center center no-repeat;
-  background-size: 50vw;
+  background-size: 100%;
 }
 
 *:not(h1):not(.glitch::after):not(.glitch::before) {
@@ -51,11 +52,10 @@ body {
 
 .videoframe {
   display: block;
-  width: 50vw;
   opacity: 1.0;
   border-radius: 1.0rem;
   text-align: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .title,
@@ -224,5 +224,48 @@ display: inline-block;
   100% {clip: rect(38px, 9999px, 49px, 0);
 }
 }
+
+/* ── Landscape mobile fix ── */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+
+  .title {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .videoframe {
+    width: 100%;
+  }
+
+  .smplr-embed {
+    height: 100vh;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+  }
+
+  .background {
+    display: none;
+  }
+
+  body {
+    background-image: none;
+    background-color: #000000;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
 
 /* END */
