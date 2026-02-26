@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+:root {
+  --bg-color: transparent;
+  --glitch-bg-color: var(--bg-color);
+  --h1-font-size: calc(3.0rem + 10vw);
+}
+
+body {
+    background: url('../blur.png') fixed top center no-repeat;
+    background-color: black;
+    background-size: 100% 300px;
+    font-family: "Barlow", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.0rem;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: url('../smoke.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+*:not(h1):not(.glitch::after):not(.glitch::before) {
+    transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title,
+.links {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.links {
+    bottom: 3.0rem;
+}
+
+.title {
+    display: block;
+    font-family: "Unica One", sans-serif;
+    font-weight: normal;
+    font-size: var(--h1-font-size);
+    letter-spacing: -1vw;
+    transform: translate(0%, 10vw);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+  max-width: 800px;
+  min-width: 400px; 
+  width: 50vw;
+}
+
+.subtitle {
+  font-size: 20%;
+  letter-spacing: 0.2rem;
+  word-break: keep-all;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.japanese,
+.chinese {
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.japanese {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.chinese {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:after,
+a:hover:after {content: ']';
+}
+
+a:before,
+a:hover:before {content: '[';
+}
+
+a:before,
+a:after {
+    opacity: 0.0;
+    transition: opacity 0.5s cubic-bezier( 0.19, 1, 0.22, 1);
+}
+
+a:hover:after,
+a:hover:before {
+    opacity: 1.0;
+    transition: opacity 0.5s cubic-bezier( 0.19, 1, 0.22, 1);
+}
+
+/* GLITCH */
+
+.glitch {
+display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  background: var(--glitch-bg-color);
+}
+
+.glitch::before, 
+.glitch::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(2);
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 9999px, 0, 0);
+  content: attr(data-text);
+  opacity: 0.5;
+}
+
+.glitch::after {
+  animation-name: glitch-animation;
+  animation-duration: 1.9s;
+  left: 2px;
+  background: var(--glitch-bg-color);
+  text-shadow: rgb(255, 0, 115) 0 0 2px;
+}
+
+.glitch::before {
+  animation-name: glitch-animation-2;
+  animation-duration: 1.5s;
+  left: -2px;
+  background: var(--glitch-bg-color);
+    text-shadow: rgb(45, 255, 255) -2px 0 10px;
+}
+
+@keyframes glitch-animation {
+  0% {clip: rect(42px, 9999px, 44px, 0);}
+  5% {clip: rect(12px, 9999px, 59px, 0);}
+  10% {clip: rect(48px, 9999px, 29px, 0);}
+  15% {clip: rect(42px, 9999px, 73px, 0);}
+  20% {clip: rect(63px, 9999px, var(--h1-font-size), 0);}
+  25% {clip: rect(34px, 9999px, 55px, 0);}
+  30% {clip: rect(86px, 9999px, 73px, 0);}
+  35% {clip: rect(20px, 9999px, var(--h1-font-size), 0);}
+  40% {clip: rect(26px, 9999px, 60px, 0);}
+  45% {clip: rect(25px, 9999px, 66px, 0);}
+  50% {clip: rect(57px, 9999px, 98px, 0);}
+  55% {clip: rect(5px, 9999px, 46px, 0);}
+  60% {clip: rect(82px, 9999px, 31px, 0);}
+  65% {clip: rect(54px, 9999px, var(--h1-font-size), 0);}
+  70% {clip: rect(28px, 9999px, 99px, 0);}
+  75% {clip: rect(45px, 9999px, 69px, 0);}
+  80% {clip: rect(23px, 9999px, 85px, 0);}
+  85% {clip: rect(54px, 9999px, 84px, 0);}
+  90% {clip: rect(45px, 9999px, 47px, 0);}
+  95% {clip: rect(37px, 9999px, var(--h1-font-size), 0);}
+  100% {clip: rect(4px, 9999px, 91px, 0);}
+}
+
+@keyframes glitch-animation-2 {
+  0% {clip: rect(65px, 9999px, 100px, 0);}
+  5% {clip: rect(52px, 9999px, 74px, 0);}
+  10% {clip: rect(79px, 9999px, 85px, 0);}
+  15% {clip: rect(75px, 9999px, var(--h1-font-size), 0);}
+  20% {clip: rect(67px, 9999px, 61px, 0);}
+  25% {clip: rect(14px, 9999px, 79px, 0);}
+  30% {clip: rect(1px, 9999px, 66px, 0);}
+  35% {clip: rect(86px, 9999px, 30px, 0);}
+  40% {clip: rect(23px, 9999px, 98px, 0);}
+  45% {clip: rect(85px, 9999px, 72px, 0);}
+  50% {clip: rect(71px, 9999px, 75px, 0);}
+  55% {clip: rect(2px, 9999px, 48px, 0);}
+  60% {clip: rect(30px, 9999px, var(--h1-font-size), 0);}
+  65% {clip: rect(59px, 9999px, 50px, 0);}
+  70% {clip: rect(41px, 9999px, 62px, 0);}
+  75% {clip: rect(2px, 9999px, 82px, 0);}
+  80% {clip: rect(47px, 9999px, 73px, 0);}
+  85% {clip: rect(3px, 9999px, var(--h1-font-size), 0);}
+  90% {clip: rect(26px, 9999px, 55px, 0);}
+  95% {clip: rect(42px, 9999px, 97px, 0);}
+  100% {clip: rect(38px, 9999px, 49px, 0);
+}
+}
+
+/* END */
