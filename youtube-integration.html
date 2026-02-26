@@ -1,0 +1,38 @@
+<!-- ============================================
+     SMPLR EMBED — INTEGRATION GUIDE
+     ============================================ -->
+
+
+<!-- ── 1. ADD TO <head> ── -->
+
+<link rel="stylesheet" href="video.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;600&display=swap">
+
+
+<!-- ── 2. INSERT IN <body> WHERE YOU WANT THE PLAYER ── -->
+
+<div class="smplr-embed" id="smplr">
+  <div class="smplr-loading" id="smplrLoading">
+    <span>LOADING STREAM …</span>
+  </div>
+  <div class="smplr-error" id="smplrError">
+    <span>Could not load stream</span>
+    <a href="https://www.youtube.com/@theinfinitealbum" target="_blank" rel="noopener">
+      Open on YouTube →
+    </a>
+  </div>
+  <div class="smplr-overlay" id="smplrOverlay">
+    <div class="play-ring">
+      <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+    </div>
+    <span class="smplr-label">The Infinite Album</span>
+    <span class="smplr-sublabel">Click to unmute</span>
+  </div>
+</div>
+
+
+<!-- ── 3. ADD BEFORE </body> ── -->
+
+<script src="video.js"></script>

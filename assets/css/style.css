@@ -10,7 +10,7 @@
 }
 
 body {
-    background: url('../blur.png') fixed top center no-repeat;
+    background: url('../../assets/images/blur.png') fixed top center no-repeat;
     background-color: black;
     background-size: 100% 300px;
     font-family: "Barlow", sans-serif;
@@ -29,15 +29,15 @@ body {
   display: block;
   width: 100vw;
   height: 100vh;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
+  opacity: 1.0;
+  mix-blend-mode: screen;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  background: url('../smoke.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('../../assets/images/smplr-tia.png') center center no-repeat;
+  background-size: 50vw;
 }
 
 *:not(h1):not(.glitch::after):not(.glitch::before) {
@@ -47,6 +47,15 @@ body {
 * {
     margin: 0;
     padding: 0;
+}
+
+.videoframe {
+  display: block;
+  width: 50vw;
+  opacity: 1.0;
+  border-radius: 1.0rem;
+  text-align: center;
+  width: 100%;
 }
 
 .title,

@@ -4,24 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMPLR</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-  <link rel="manifest" href="../favicon/site.webmanifest">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="./assets/css/video.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;600&display=swap">
+  <script src="./assets/js/video.js" defer></script>
 </head>
 <body>
   <div class="title">
-    <img class="logo" src="smplr-tia.png">
-        <div>
-          <iframe
-  width="560" height="315"
-  src="https://www.youtube.com/embed/JdI0XoDwGa0?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=JdI0XoDwGa0"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen
-></iframe>
+    <!-- <img class="logo" src="../assets/images/smplr-tia.png"> -->
+        <div class="videoframe">
+          <div class="smplr-embed" id="smplr">
+            <div class="smplr-loading" id="smplrLoading">
+            <span>LOADING STREAM …</span>
+            </div>
+            <div class="smplr-error" id="smplrError">
+            <span>Could not load stream</span>
+            <a href="https://www.youtube.com/@theinfinitealbum" target="_blank" rel="noopener">
+            Open on YouTube →
+            </a>
+            </div>
+            <div class="smplr-overlay" id="smplrOverlay">
+            <div class="play-ring">
+            <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+            </div>
+            <span class="smplr-label">The Infinite Album</span>
+            <span class="smplr-sublabel">Click to unmute</span>
+            </div>
+          </div>
         </div>
   </div>
   </div>
@@ -29,7 +44,7 @@
   <div class="content">
   </div>
   <div class="links">
-    <a href="https://youtube.com/@theinfinitealbum">The Infinite Album</a>
+    <a href="https://youtube.com/@theinfinitealbum">YouTube</a>
     <a href="https://instagram.com/theinfinitealbum">Instagram</a>
     <a href="https://smplr.bandcamp.com/">Bandcamp</a>
   </div>
