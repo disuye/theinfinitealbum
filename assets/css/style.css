@@ -45,7 +45,7 @@ body {
   top: 0%;
   left: 50%;
   transform: translate(-50%, -33%);
-  z-index: -1;
+  z-index: -10;
   background: url('../../assets/images/smplr-tia.png') center center no-repeat;
   background-size: 100%;
 }
@@ -111,13 +111,13 @@ body {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  width: calc(100vw - 2.0rem);
+  width: 100vw;
   z-index: -1;
 }
 
 .content span {
   padding: 0.5rem 4.0rem;
-  max-width: 1080px;
+  max-width: calc(1080px - 4.0rem);
   margin: auto;
   opacity: 0.0;
   display: block;
@@ -132,7 +132,7 @@ body {
 
 @media screen and (min-width: 1080px) {
   .content span {
-    padding-left: calc(50vw - 540px + 5.0rem);
+    left: calc(50vw - 540px);
     font-size: 1.2rem;
   }  
 }

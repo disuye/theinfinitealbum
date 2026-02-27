@@ -3,7 +3,7 @@
 .smplr-embed {
   display: block;
   position: relative;
-  width: calc(100vw - 2.0rem);
+  width: calc(100vw - 02.0rem);
   text-align: center;
   margin: auto;
   max-width: 1080px;
