@@ -37,7 +37,7 @@
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   cursor: pointer;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .smplr-overlay.hidden {
@@ -47,19 +47,18 @@
 }
 
 .smplr-overlay:hover .play-ring {
-  transform: scale(1.08);
   box-shadow: 0 0 40px rgba(255, 59, 48, 0.15), 0 0 80px rgba(255, 59, 48, 0.15);
 }
 
 .play-ring {
-  width: 68px;
-  height: 48px;
+  width: 66px;
+  height: 46px;
   border-radius: 14px;
   background-color:  rgba(255,255,255,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease !important;
   box-shadow: 0 0 20px rgba(255, 59, 48, 0.15);
 }
 
@@ -71,17 +70,18 @@
 }
 
 .smplr-label {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #e0e0e0;
+  color: #FFFFFF;
 }
 
 .smplr-sublabel {
+  font-family: 'Barlow', sans-serif;
   font-size: 11px;
-  color: #666;
+  color: #E0E0E0C1;
   letter-spacing: 0.05em;
 }
 

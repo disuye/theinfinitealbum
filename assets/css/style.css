@@ -16,6 +16,7 @@
   --bg-color: transparent;
   --glitch-bg-color: var(--bg-color);
   --h1-font-size: calc(3.0rem + 10vw);
+  --id-color: #FFFF00;
 }
 
 body {
@@ -117,7 +118,7 @@ body {
 }
 
 .content span {
-  padding: 0.5rem 4.0rem;
+  padding: 0.5rem 3.0rem;
   max-width: calc(1080px - 4.0rem);
   margin: auto;
   opacity: 0.0;
@@ -129,6 +130,7 @@ body {
   font-size: 0.93rem;
   text-transform: initial !important;
   word-break: keep-all;
+  border-left: 1.0rem solid var(--id-color);
 }
 
 @media screen and (min-width: 1080px) {
@@ -139,16 +141,26 @@ body {
 }
 
 #flipped div,
-#flopped span {
+#flopped span,
+#flopped2 span {
   transition: all 300ms ease-in-out;
 }
 
-body:has(#flipper:hover) #flipped div {
+body:has(#flipper:hover) #flipped div,
+body:has(#flipper2:hover) #flipped div {
   opacity: 0.1;
 }
 
-body:has(#flipper:hover) #flopped span {
+body:has(#flipper:hover) #flopped span,
+body:has(#flipper2:hover) #flopped2 span {
   opacity: 1.0;
+}
+
+#flopped2 a {
+  padding:0; 
+  font-weight:300; 
+  font-family:'Barlow'; 
+  font-size: 1.0rem;
 }
 
 .japanese,
@@ -170,14 +182,18 @@ a {
     color: white;
     text-decoration: none;
     display: inline-block;
+    padding: 1.0rem 0.0rem;
+    margin-bottom: -1.0rem;
 }
 
 a:after,
-a:hover:after {content: ']';
+a:hover:after{
+  content: ']';
 }
 
 a:before,
-a:hover:before {content: '[';
+a:hover:before {
+  content: '[';
 }
 
 a:before,
