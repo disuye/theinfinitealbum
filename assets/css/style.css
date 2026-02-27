@@ -76,6 +76,7 @@ body {
 
 .links {
     bottom: 3.0rem;
+    font-size: 0.93rem;
 }
 
 .title {
@@ -105,16 +106,13 @@ body {
 }
 
 .content {
-  display: none;
+  display: block;
   position: absolute;
   top: 50%;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
   text-align: center;
   width: calc(100vw - 2.0rem);
-}
-
-#flipper {
-  display: none;
+  z-index: -1;
 }
 
 .content span {
@@ -312,7 +310,6 @@ display: inline-block;
     background-image: none;
     background-color: #000000;
   }
-
 }
 
 @media screen and (max-width: 768px) {
