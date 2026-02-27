@@ -47,7 +47,7 @@
 }
 
 .smplr-overlay:hover .play-ring {
-  box-shadow: 0 0 40px rgba(255, 59, 48, 0.15), 0 0 80px rgba(255, 59, 48, 0.15);
+  box-shadow: 0 0 40px rgba(255 58 48 / 0.26), 0 0 80px rgba(255 58 48 / 0.25);
 }
 
 .play-ring {
@@ -59,7 +59,6 @@
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.3s ease !important;
-  box-shadow: 0 0 20px rgba(255, 59, 48, 0.15);
 }
 
 .play-ring svg {
