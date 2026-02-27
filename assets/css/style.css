@@ -126,6 +126,7 @@ body {
   font-size: 0.93rem;
   text-transform: initial !important;
   word-break: keep-all;
+  z-index:0;
 }
 
 @media screen and (min-width: 1080px) {
@@ -146,6 +147,7 @@ body:has(#flipper:hover) #flipped div {
 
 body:has(#flipper:hover) #flopped span {
   opacity: 1.0;
+  z-index: 100;
 }
 
 .japanese,
