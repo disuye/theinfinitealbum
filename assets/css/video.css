@@ -70,18 +70,17 @@
 
 .smplr-label {
   font-family: 'Barlow', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.12em;
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-.smplr-sublabel {
-  font-family: 'Barlow', sans-serif;
-  font-size: 11px;
-  color: #E0E0E0C1;
-  letter-spacing: 0.05em;
+.smplr-videologo img {
+  width: 57%;
+  padding: 0;
+  margin: 0;
 }
 
 /* ── Loading ── */
