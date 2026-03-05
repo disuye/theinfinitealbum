@@ -131,6 +131,10 @@ body:has(*[id*='-show']:target) #flipped {
     transition-timing-function:ease-in-out;
 }
 
+body:has(*[id*='-show']:target) #menu .close {
+    opacity: 1.0;
+}
+
  #bg {
     opacity: 1.0;
     -webkit-filter: blur(0px) grayscale(0.0);
@@ -169,7 +173,7 @@ body:has(*[id*='-show']:target) #flipped {
     letter-spacing: 0.1rem;
     font-style: normal;
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
 }
 
 #menu a:hover {
@@ -177,6 +181,16 @@ body:has(*[id*='-show']:target) #flipped {
     background-color: rgba(0, 0, 0, 0.12);
     color: var(--id-color);
     transition: 0.15s all ease-in-out;
+}
+
+#menu .close,
+#menu .close:hover {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    padding: 6px;
+    margin: 3px 6px;
+    opacity: 0.0;
 }
 
 .bracket:after,
@@ -414,7 +428,7 @@ li:before {
         visibility: visible;
         position: fixed;
         /* calc value adjusted to match number of menu items */
-        top: calc(-9.5rem - 1px);
+        top: calc(-11.0rem - 1px);
         right: 0;
         width: 100vw;
         transition: 0.3s all ease-in-out;
