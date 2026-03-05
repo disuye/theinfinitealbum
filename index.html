@@ -1,24 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMPLR</title>
-  <link rel="stylesheet" href="./assets/css/video.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;600&display=swap">
-  <script src="./assets/js/video.js" defer></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>SMPLR - The Infinite Album</title>
+	<link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./assets/css/video.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/font-face.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<script src="./assets/js/video.js" defer></script>
 </head>
 <body>
-  <div class="title">
-    <!-- <img class="logo" src="../assets/images/smplr-tia.png"> -->
-        <div id="flipped" class="videoframe">
+
+<!-- BACKGROUND IMAGE -->
+<a href="#"><div id="bg"></div></a>
+
+<!-- HEADER / LINK MENU -->
+<div class="header">
+	<div id="menu">
+	<a class="bracket" href="#about-show" onClick="anchorFunction('about-top')">About</a>
+	<a class="bracket" href="#livestream-show" onClick="anchorFunction('livestream-top')">Livestream</a>
+	<a class="bracket" href="https://www.youtube.com/channel/UCjrNDV1WvaW5gBPP2HzFt8A?sub_confirmation=1" target="_blank">Subscribe</a>
+	<a class="bracket" href="#contact-show" onClick="anchorFunction('contact-top')">Contact</a>
+	<!-- <a class="bracket" href="#news-show" onClick="anchorFunction('news-top')">News</a> -->
+	<a class="bracket" href="#more-show" onClick="anchorFunction('more-top')">More</a>
+	<a id="hamburger" href="#menu">﹀</a><a class="close" href="#"></a>
+	</div>
+</div>
+
+<!-- LOGO -->
+<div class="centerblock">
+	<!-- <div class="site-title">The Infinite Album</div>
+	<div class="message"></div> -->
+ <div id="flipped" class="videoframe">
           <div class="smplr-embed" id="smplr">
             <div class="smplr-loading" id="smplrLoading">
             <span>LOADING STREAM …</span>
@@ -31,46 +45,90 @@
             </div>
             <div class="smplr-overlay" id="smplrOverlay">
               <span class="smplr-videologo"><img src="../../assets/images/smplr-tia.png"></span>
-            <!-- <div class="play-ring">
-            <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
-            </div> -->
             <span class="smplr-label">Click to Stream</span>
             </div>
           </div>
         </div>
-  </div>
-  </div>
-  </div>
-  <div id="flopped" class="content">
-    <span>Continuously generated algorithmic music coded by one human.</span>
-    <span>Inspired by Dadaism, Pratītyasamutpāda, amplituhedron, cut-up and dub.</span>
-    <span>This exists, then that exists. Emergent. Enjoy!</span>
-    <span>|</span>
-    <span>SMPLR is the result of a lifetime of questions; on music, the act of creation, artistic legacy, curated chaos, audible reality vs. an extrapolated unknown.</span>
-    <span>SMPLR is both the artist and the generative engine.</span>
-  </div>
-    <div id="flopped2" class="content">
-      <span>Click <a>[CONTACT]</a> </span>
-      <span>smplr@theinfinitealbum.com</span>
-      <span>|</span>
+</div>
+
+<!-- ABOUT CONTENT -->
+<div id="about-show">
+	<a class="close" href="#"></a>
+	<div id="about-top" class="show-bg"></div>
+	<h1>About</h1>
+	<div class="show-text">
+		<span>Continuously generated algorithmic music coded by one human.</span>
+		<span>Inspired by Dadaism, Pratītyasamutpāda, amplituhedron, cut-up and dub.</span>
+		<span>This exists, then that exists. Emergent. Enjoy!</span>
+		<span></span>
+		<span>SMPLR is the result of a lifetime of questions; on music, the act of creation, artistic legacy, curated chaos, audible reality vs. an extrapolated unknown.</span>
+		<span></span>
+		<span>SMPLR is both the artist and the generative engine.</span>
+	</div>
+</div>
+
+<!-- LIVESTREAM CONTENT -->
+<div id="livestream-show">
+	<a class="close" href="#"></a>
+	<div id="livestream-top" class="show-bg"></div>
+	<h1>Livestream</h1>
+	<div class="show-text">
+		<span><a class="bracket" href="https://youtube.com/@theinfinitealbum" target="_blank">Listen on YouTube</a></span>
+		<span><a class="bracket" href="https://www.youtube.com/channel/UCjrNDV1WvaW5gBPP2HzFt8A?sub_confirmation=1" target="_blank">Subscribe</a></span>
+	</div>
+</div>
+
+<!-- NEWS CONTENT -->
+<!-- <div id="news-show">
+	<a class="close" href="#"></a>
+	<div id="news-top" class="show-bg"></div>
+	<h1>News</h1>
+	<div class="show-text">
+		<span>News content goes here.</span>
+	</div>
+</div> -->
+
+<!-- CONTACT CONTENT -->
+<div id="contact-show">
+	<a class="close" href="#"></a>
+	<div id="contact-top" class="show-bg"></div>
+	<h1>Contact</h1>
+	<div class="show-text">
+      <span>Email us about anything:<br><a class="bracket" href="mailto:smplr@theinfinitealbum.com">smplr@theinfinitealbum.com</a></span>
+      <span></span>
       <span>Installations, collaborations, ruminations, salutations.</span>
-  </div>
-  <div class="links">
-    <a id="flipper">About</a>
-    <a href="https://youtube.com/@theinfinitealbum" target="_blank">YouTube</a>
-    <!-- <a href="https://instagram.com/theinfinitealbum" target="_blank">Instagram</a> -->
-    <!-- <a href="https://smplr.bandcamp.com" target="_blank">BandCamp</a> -->     
-    <a href="https://www.youtube.com/channel/UCjrNDV1WvaW5gBPP2HzFt8A?sub_confirmation=1" target="_blank">Subscribe</a>
-    <a id="flipper2" href="mailto:smplr@theinfinitealbum.com">Contact</a>
-  </div>
-  <!-- <div class="background"></div> -->
-</body>
+	</div>
+</div>
+
+<!-- MORE CONTENT -->
+<div id="more-show">
+	<a class="close" href="#"></a>
+	<div id="more-top" class="show-bg"></div>
+	<h1>More</h1>
+	<div class="show-text">
+		<span><a class="bracket" href="https://www.github.com/disuye">Github</a></span>
+		<span><a class="bracket" href="https://www.disuye.com">Disuye.com</a></span>
+		<span><a class="bracket" href="https://www.instagram.com/theinfinitealbum">Instagram</a></span>
+		<span><a class="bracket" href="https://www.soundcloud.com/disuye">SoundCloud</a></span>
+		<span><a class="bracket" href="https://smplr.bandcamp.com">BandCamp</a></span>
+	</div>
+</div>
+
+<!-- FOOTER -->
+		<div class="footer"></div>
+
+<!-- SCRIPTS -->
+<script>
+	// Sub-Anchor Navigation, smooth scroll except Safari
+	function anchorFunction(goHere) {
+		if ((typeof navigator.vendor!='undefined') &&
+		navigator.vendor.toLowerCase().indexOf('apple')!=-1) {
+			document.getElementById(goHere).scrollIntoView();
+		} else {
+			document.getElementById(goHere).scrollIntoView({behavior: 'smooth'});
+		}
+	}
+</script>
+
+	</body>
 </html>
-
-
-<!--ＳＭＰＬＲ
-The Infinite Album
-
-Continuously generated algorithmic music coded by one human in an attempt to create without the observer effect. Inspired by Dadaism, Pratītyasamutpāda, amplituhedron, cut-up and dub. Hoping that positivity constraints imposed upon combinatorial space reveals a hidden geometric structure. This exists, then that exists. Emergent. Enjoy!
-
-No AIs were used nor harmed in the making of this broadcast.-->
