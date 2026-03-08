@@ -221,6 +221,10 @@ body:has(*[id*='-show']:target) #menu .close {
     visibility: hidden;
 }
 
+.show-text .bracket {
+    margin-left: -0.5rem;
+}
+
 .centerblock {
     display: block;
     position: absolute;
