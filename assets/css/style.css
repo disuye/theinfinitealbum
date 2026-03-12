@@ -159,6 +159,7 @@ body:has(*[id*='-show']:target) #menu .close {
     font-size: 0; /* allows inline-block without div gaps */
 }
 
+.menulook,
 #menu a,
 #menu a:active {
     display: inline-block;
