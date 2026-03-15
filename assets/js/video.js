@@ -7,7 +7,8 @@
   const FEED_URL   = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID;
 
   // Fallback if RSS fetch fails — update this periodically
-  const FALLBACK_VIDEO_ID = 'YwvuMDLzr74';
+  // https://www.youtube.com/live/9btLHThfIq4 <- 30 minutes long, not too weird for joe average
+  const FALLBACK_VIDEO_ID = '9btLHThfIq4';
 
   // CORS proxies (free/public — swap for your own proxy in production)
   const CORS_PROXIES = [
