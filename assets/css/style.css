@@ -101,11 +101,16 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    margin-left:-1.0rem;
+    color: var(--id-color);
 }
 
 h1 {
-    color: var(--id-color);
+    font-size: 2.4rem;
+    margin-left:-1.0rem;
+}
+
+h2 {
+    font-size: 1.6rem;;
 }
 
 #bg {
@@ -175,6 +180,18 @@ body:has(*[id*='-show']:target) #menu .close {
     font-style: normal;
     font-weight: 300;
     font-size: 1.0rem;
+}
+
+.button {
+    width: 50%;
+    text-align: center;
+    border: 1px solid #808080;
+    padding: 1.0rem;
+    border-radius: 0.5rem;
+}
+
+.button:hover {
+    border-color: white;
 }
 
 #menu a:hover {
@@ -320,6 +337,10 @@ s {
     border-left: 1.0rem solid rgba(48, 48, 48, 0.4);
 }
 
+.techinfo {
+    font-size: 80% !important;
+}
+
 /* Safari font weight renders too thick, so... */
 _::-webkit-full-page-media,
 _:future,
@@ -440,7 +461,7 @@ li:before {
         visibility: visible;
         position: fixed;
         /* calc value adjusted to match number of menu items */
-        top: calc(-11.0rem - 1px);
+        top: calc(-13.5rem - 1px);
         right: 0;
         width: 100vw;
         transition: 0.3s all ease-in-out;
