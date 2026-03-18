@@ -348,6 +348,11 @@ _:future,
     font-weight: 200 !important;
 }
 
+q {
+  font-style: italic;
+  quotes: '"' '"';
+}
+
 .show-text a {
     color: #FFFFFF;
     text-decoration: none;
