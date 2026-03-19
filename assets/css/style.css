@@ -95,6 +95,17 @@ body {
     min-height: 4.0rem;
 }
 
+#jsinsert {
+    width: 80%;
+    font-size: 0.65rem;
+}
+
+.artifact {
+    padding-left: 3.0rem;
+    background: rgba(0,0,255,0.1);
+    border-radius: 0.5rem;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Unica One';
     font-weight: 200;
@@ -278,7 +289,7 @@ body:has(*[id*='-show']:target) #menu .close {
     opacity: 0.0;
     left: 50%; top: 50%;
     transform: var(--recenter);
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     max-width: calc(100vw - 6.0rem);
     height: fit-content;
     max-height: calc(100% - 10.0rem);
@@ -353,9 +364,21 @@ q {
   quotes: '"' '"';
 }
 
+.spacer {
+    display: block;
+    padding-bottom: 4.0rem;
+    border-left: 1.0rem solid rgba(48, 48, 48, 0.4);
+}
+
 .show-text a {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+img.crop16x9 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .close {

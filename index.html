@@ -23,7 +23,6 @@
 	<a class="bracket" href="#ideas-show" onClick="anchorFunction('ideas-top')">Ideas</a>
 	<a class="bracket" href="#albums-show" onClick="anchorFunction('albums-top')">Albums</a>
 	<a class="bracket" href="#contact-show" onClick="anchorFunction('contact-top')">Contact</a>
-	<!-- <a class="bracket" href="#smplrx-show" onClick="anchorFunction('smplrx-top')">SMPLR</a> -->
 	<!-- <a class="bracket" href="#links-show" onClick="anchorFunction('links-top')">Links</a> -->
 	<a class="bracket" href="https://www.youtube.com/channel/UCjrNDV1WvaW5gBPP2HzFt8A?sub_confirmation=1" target="_blank">Subscribe</a>
 	<a id="hamburger" href="#menu">﹀</a><a class="close" href="#"></a>
@@ -90,6 +89,15 @@
 		<span>The number of atoms in the observable universe is 10<sup>80</sup> meanwhile the number of unique songs SMPLR will generate is 10<sup>84</sup>...</span>
 		<span></span>
 		<span>Statement and technical abstract coming soon.</span>
+		<!-- <span>Meanwhile, here is one of the early SMPLR shell scripts, the engine is now C++ however the algorithm is sonically identical.</span>
+		<div class="spacer"></div>
+		<div class="artifact"><pre><code id="jsinsert">Loading file...</code></pre>
+		<script>
+			fetch('./assets/artifact1.txt')
+			.then(r => r.text())
+			.then(text => document.getElementById('jsinsert').textContent = text)
+			.catch(e => document.getElementById('jsinsert').textContent = 'Error: ' + e);
+		</script></div> -->
 	</div>
 </div>
 
@@ -99,17 +107,43 @@
 	<div id="albums-top" class="show-bg"></div>
 	<h1>Albums</h1>
 	<div class="show-text">
-		<img style="width:100%;" src="./assets/images/monotone1-artwork.png">
+
+		<!-- Monotone 1 -->
+		<img class="crop16x9" src="./assets/images/monotone1-artwork.png">
 		<h2>SMPLR <q>Monotone 1</q></h2>
 		<span class="techinfo">2026-03-18 | 17 songs | 95 minutes | one algorithm</span>
 		<span><a class="menulook button" href="https://youtu.be/bZfgN2uBvFI" target="_blank">Listen for free on YouTube</a></span>
 		<span>The SMPLR compositional algorithm remains unchanged. The only difference is the sound library. The result is a less chaotic, more harmonious listening experience that – in this instance - evokes mantras & meditative temples.</span>
-
 		<span><q>Monotone 1</q> ignores the 13,000 audio file sample library used for <q>The Infinite Album</q> live stream, and relies on just a small handful of closely related source sounds... 3, in fact.</span> 
-
 		<span>These 3 sounds are batch processed using <a class="bracket" href="https://www.disuye.com/ffab">FFAB</a> against several hundred convolution IR reverb files to create a subtle sonic palette of ~2869 nearly identical samples: Same sound, different spaces.</span>
-
 		<span>This exists, then that exists. Emergent. Enjoy!</span>
+		<div class="spacer"></div>
+
+		<!-- Bandcamp Series -->
+		<img class="crop16x9" src="./assets/images/00004.png">
+		<h2>SMPLR <q>00004</q></h2>
+		<span class="techinfo">2026-01 | 31 songs</span>
+		<span><a class="menulook button" href="https://smplr.bandcamp.com/album/00004" target="_blank">Listen on BandCamp</a></span>		
+		<span>Albums <q>00001</q> thru <q>00004</q> were uploaded before the live stream was fully functional. The algorithm is exactly the same as the original shell scripts, but the SMPLR C++ engine was still in development. The sound libraries are similar, only less refined. Early iterations, still canon.</span>
+		<div class="spacer"></div>
+
+		<img class="crop16x9" src="./assets/images/00003.png">
+		<h2>SMPLR <q>00003</q></h2>
+		<span class="techinfo">2026-01 | 18 songs</span>
+		<span><a class="menulook button" href="https://smplr.bandcamp.com/album/00003" target="_blank">Listen on BandCamp</a></span>
+		<div class="spacer"></div>
+
+		<img class="crop16x9" src="./assets/images/00002.png">
+		<h2>SMPLR <q>00002</q></h2>
+		<span class="techinfo">2025-12 | 18 songs</span>
+		<span><a class="menulook button" href="https://smplr.bandcamp.com/album/00002" target="_blank">Listen on BandCamp</a></span>
+		<div class="spacer"></div>
+		
+		<img class="crop16x9" src="./assets/images/00001.png">
+		<h2>SMPLR <q>00001</q></h2>
+		<span class="techinfo">2025-12 | 15 songs</span>
+		
+		<span><a class="menulook button" href="https://smplr.bandcamp.com/album/00001" target="_blank">Listen on BandCamp</a></span>
 	</div>
 </div>
 
@@ -124,20 +158,6 @@
       <span></span>
 	</div>
 </div>
-
-<!-- SMPLR CONTENT -->
-<!-- <div id="smplrx-show">
-	<a class="close" href="#"></a>
-	<div id="smplrx-top" class="show-bg"></div>
-	<h1>SMPLR</h1>
-	<div class="show-text">
-		<span>The Infinite Album by SMPLR</span>
-		<span>SMPLR is both the artist and the generative engine.</span>
-		<span>SMPLR is a collaboration between artist <a href="https://www.soundcloud.com/disuye">Dan F</a> and the people who built all the necessary technology: The people behind C++/Qt, the people behind FFmpeg, the people behind Claude, the people behind the 13000+ strong audio sample library, the people behind the streaming platforms, the people who keep the internet going... literally thousands of minds touched this project, even if they are never aware of it.</span>
-		<span></span>
-	</div>
-</div> -->
-
 
 <!-- LINKS CONTENT -->
 <!-- <div id="links-show">
