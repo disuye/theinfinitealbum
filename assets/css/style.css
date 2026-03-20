@@ -331,6 +331,8 @@ s {
     text-align: left;
     transition: 0.2s all ease-in-out;
     text-align: left;
+        border-bottom: 1.0rem solid rgba(48, 48, 48, 0.4);
+
 }
 
 .show-text span {
@@ -376,9 +378,25 @@ q {
 }
 
 img.crop16x9 {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    width: 70%;
+    padding: 2.0rem 15% 2.0rem calc(15% - 1.0rem);
+    border-left: 1.0rem solid rgba(48, 48, 48, 0.4);
+}
+
+a:has(img.fit) {
+    display: block;
+    line-height: 0;
+    font-size: 0;
+}
+
+img.fit {
+    width: 70%;
+    padding: 2.0rem 15% 2.0rem calc(15% - 1.0rem);
+    border-left: 1.0rem solid rgba(48, 48, 48, 0.4);
 }
 
 .close {
