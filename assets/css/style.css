@@ -334,8 +334,7 @@ s {
     text-align: left;
     transition: 0.2s all ease-in-out;
     text-align: left;
-        border-bottom: 1.0rem solid rgba(48, 48, 48, 0.4);
-
+    border-bottom: 1.0rem solid rgba(48, 48, 48, 0.4);
 }
 
 .show-text span {
@@ -465,7 +464,7 @@ li:before {
 }
 
 .streamicons {
-    width: 100%;
+    width: calc(100% - 2.0rem);
     text-align: center;
     border-left: 1.0rem solid rgba(48, 48, 48, 0.4);
 }
