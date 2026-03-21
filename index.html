@@ -76,7 +76,7 @@
 	<h1>Livestream</h1>
 	<div class="show-text">
 		<span>SMPLR creates a continual & ephemeral flow of music aka <q>The Infinite Album</q>, in stark contrast to the static generative algorithm at it's core.</span><span>A multitude of outcomes can exist despite one set of rules. Experience the live stream below...</span>
-		<span><a class="bracket" href="https://youtube.com/@theinfinitealbum" target="_blank"><img class="altlogo" src="./assets/images/logo-youtube.svg"></a> <a class="bracket" href="https://www.twitch.tv/theinfinitealbum" target="_blank"><img class="altlogo" src="./assets/images/logo-twitch.svg"></a> <a class="bracket" href="https://kick.com/theinfinitealbum" target="_blank"><img class="altlogo" src="./assets/images/logo-kick.svg"></a></span>		
+		<div class="streamicons"><a class="bracket" href="https://youtube.com/@theinfinitealbum" target="_blank"><img class="altlogo" src="./assets/images/logo-youtube.svg"></a> <a class="bracket" href="https://www.twitch.tv/theinfinitealbum" target="_blank"><img class="altlogo" src="./assets/images/logo-twitch.svg"></a> <a class="bracket" href="https://kick.com/theinfinitealbum" target="_blank"><img class="altlogo" src="./assets/images/logo-kick.svg"></a></div>		
 		<span><a class="bracket menulook button" href="https://www.youtube.com/channel/UCjrNDV1WvaW5gBPP2HzFt8A?sub_confirmation=1" target="_blank">Subscribe</a></span>
 		<div class="spacer"></div>
 	</div>
@@ -89,19 +89,17 @@
 	<h1>Ideas</h1>
 	<div class="show-text">
 		<h2>Abstract</h2>
-		<span>The number of atoms in the observable universe is 10<sup>80</sup> meanwhile the number of unique songs SMPLR will generate is 10<sup>84</sup>...</span>
-		<span></span>
-		<span>Conceptual statement and technical abstract coming soon.</span>
+		<span>The number of atoms in the observable universe is 10<sup>80</sup> meanwhile the number of unique songs SMPLR will generate is 10<sup>84</sup>... Conceptual statement and technical abstract coming soon.</span>
 		<div class="spacer"></div>
 		<h2>the SMPLR engine</h2>
 		<span>The SMPLR engine feeds audio samples through two distinct FFmpeg passes: Song composition, effects &amp; mastering; then stream assembly, video visualization, encoding &amp; RTMP/S streaming.</span>
 		<a href="./assets/images/ui-main.png"><img class="fit" src="./assets/images/ui-main.png"></a>
-		<span>SMPLR began life as a quick &amp; dirty shell script feeding files into an FFmpeg command, which evolved into a C++/Qt based one-shot creation tool [shown above], then came recipe export, recipe tweaking, recipe re-run and batch capabilities, and finally the fully autonomous creation &amp; live streaming application [shown below] was realized.</span>
+		<span>SMPLR began life as a quick &amp; dirty shell script gathering &amp; sending files through an FFmpeg command. The shell script evolved into a C++/Qt based one-shot creation tool [shown above], with recipe export, recipe tweaking &amp; re-run plus rudimentary batch capabilities. Finally, the fully autonomous creation &amp; live streaming application [shown below] was realized and launched.</span>
 		<a href="./assets/images/ui-stream.png"><img class="fit" src="./assets/images/ui-stream.png"></a>
 		<div class="spacer"></div>
 		<h2>Recipe.txt</h2>
 		<span>While music and the live stream are ostensibly the main purpose of SMPLR, in reality, the primary output are the recipe TXT files. These recipe files are the artifacts.</span>
-		<span>Every song (ergo the entire live stream) can be reproduced by sending the recipe files back thru FFmpeg – as long as the user has access to the original sample library. One month of 24/7 live stream consumes just a couple hundred MB of TXT and LOG files.</span>
+		<span>Every song (ergo the entire live stream) can be reproduced by sending the recipe files back thru FFmpeg – as long as the user has access to the original sample library. One month of 24/7 live stream consumes just a couple hundred MB of drive space as TXT and LOG files. A further 11.62 GB is required for source samples, for the duration of the project.</span>
 		<a href="./assets/images/recipe.png"><img class="fit" src="./assets/images/recipe.png"></a>
 		<span>Even though SMPLR's output is ephemeral, everything is deterministic and reproducible. The engine may appear as open source code in the future, but for the time being the algorithm and logic will remain private.</span>
 		<div class="spacer"></div>		
@@ -123,6 +121,9 @@
 	<div id="albums-top" class="show-bg"></div>
 	<h1>Albums</h1>
 	<div class="show-text">
+		<span>The continuous <a class="bracket" href="#livestream-show" onClick="anchorFunction('livestream-top')">live stream</a> is the primary engagement, however, from time to time SMPLR experiments with self contained short format albums.</span>
+		<div class="spacer"></div>
+
 
 		<!-- Monotone 1 -->
 		<h2>SMPLR <q>Monotone 1</q></h2>
@@ -169,7 +170,8 @@
 	<div id="contact-top" class="show-bg"></div>
 	<h1>Contact</h1>
 	<div class="show-text">
-		<span>Email us about anything. Installations, collaborations, ruminations, salutations.</span>
+		<span>Open for collabs, installations, custom audio related code.</span>
+		<span></span>
 		<span><a class="bracket menulook button" href="mailto:smplr@theinfinitealbum.com">email</a></span>
 		<div class="spacer"></div>
 	</div>
