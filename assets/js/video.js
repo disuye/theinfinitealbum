@@ -8,7 +8,8 @@
 
   // Fallback if RSS fetch fails — update this periodically
   // https://www.youtube.com/live/9btLHThfIq4 <- 30 minutes long, not too weird for joe average
-  const FALLBACK_VIDEO_ID = '9btLHThfIq4';
+  // https://www.youtube.com/watch?v=btnUjWrlunM <- 7 hours, recently popular?
+  const FALLBACK_VIDEO_ID = 'btnUjWrlunM';
 
   // CORS proxies (free/public — swap for your own proxy in production)
   const CORS_PROXIES = [
