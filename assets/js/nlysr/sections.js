@@ -2,7 +2,7 @@
 // Each declares the JSON files it needs; main.js fetches them lazily.
 // Numbers come from the data; only the explanatory sentences are written here.
 import { num, pct, esc, stem, dayLabel, stamp, localMs, fillDays, monthName, DAY_MS } from "./format.js";
-import { histogram, lines, heatmap, strip, figure, hbars, stats, table, p } from "./charts.js";
+import { histogram, lines, heatmap, strip, figure, hbars, stats, table, notes, p } from "./charts.js";
 
 const QUANTILES = ["p0", "p5", "p25", "p50", "p75", "p95", "p100"];
 const DRAW_LABELS = {
@@ -77,6 +77,10 @@ export const SECTIONS = {
 			+ p(`SMPLR composes each track at a tempo drawn evenly between ${num(o.bpm_recipe.p0)} and ${num(o.bpm_recipe.p100)} BPM. On air, the whole track plays 48000 ÷ R faster and higher, where R is the sample rate of its first sample, so broadcast tempo stretches out to ${num(o.bpm_on_air.p100)} BPM.`)
 			+ figure(histogram(generated.bins.map((b) => b[2]), { label: `Generated BPM, flat from ${o.bpm_recipe.p0} to ${o.bpm_recipe.p100}`, cls: "bar dim", h: 40 }), genAxis, "Generated BPM")
 			+ figure(histogram(onAir.map((b) => b[2]), { label: `Broadcast BPM, median ${o.bpm_on_air.p50}, tail to ${o.bpm_on_air.p100}`, h: 40 }), bpmAxis, "Broadcast BPM")
+			+ notes([
+				["Generated BPM", `The tempo SMPLR picks for each track (${num(o.bpm_recipe.p0)}–${num(o.bpm_recipe.p100)}) sets the length of the smallest rhythmic step: in musical terms, the speed of one 64th note. SMPLR's recipe files call this 64th step a '16th note', a naming quirk inherited from the original shell scripts to mean 1/16th of a beat.`],
+				["Broadcast BPM", `Generated BPM × the playback speed-up resampling (${num(o.speed_factor.p0)}–${num(o.speed_factor.p100)}×) before streaming. A measure of how fast the audio runs, not a tempo you can tap along to.`],
+			], "What BPM means here")
 			+ p(`In the recipe every sample is pitched down (median ${signed(pr.p50)} semitones). After the speed-up, ${pct(aboveOriginal, 0)} of them sound above their original pitch.`)
 			+ figure(histogram(genPitch.map((b) => b[2]), { label: `Recipe pitch, median ${pr.p50} semitones`, cls: "bar dim", h: 40 }), pitchAxis(genPitch), "Generated pitch")
 			+ figure(histogram(airPitch.map((b) => b[2]), { label: `Broadcast pitch, median ${pa.p50} semitones`, h: 40 }), pitchAxis(airPitch), "Broadcast pitch")

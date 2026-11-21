@@ -95,5 +95,9 @@ export function table(head, rows, summary = "Data", open = false) {
 <tbody>${rows.map((r) => `<tr>${r.map((c, i) => cell("td", c, i)).join("")}</tr>`).join("")}</tbody></table></details>`;
 }
 
+/** Collapsible glossary footnote: [[term, html], …]. Caller escapes any data strings. */
+export const notes = (items, summary = "Notes") => `<details class="nlysr-data"><summary>${esc(summary)}</summary><dl>${
+	items.map(([term, html]) => `<dt>${esc(term)}</dt><dd>${html}</dd>`).join("")}</dl></details>`;
+
 /** A site paragraph (.show-text span). Caller escapes any data strings. */
 export const p = (html, cls = "") => `<span${cls ? ` class="${cls}"` : ""}>${html}</span>`;

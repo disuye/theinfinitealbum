@@ -109,6 +109,9 @@
 /* Table fallbacks */
 .nlysr-data summary { cursor: pointer; opacity: 0.6; }
 .nlysr-data summary:hover { opacity: 1; }
+.nlysr-data dl { margin: 0.5rem 0 0; line-height: 1.5; }
+.nlysr-data dt { color: var(--id-color); font-weight: 300; }
+.nlysr-data dd { margin: 0 0 0.75rem; opacity: 0.8; }
 .nlysr-data table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 85%; }
 .nlysr-data th,
 .nlysr-data td { padding: 0.2rem 0.75rem 0.2rem 0; text-align: left; font-weight: 200; }
