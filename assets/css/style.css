@@ -514,15 +514,23 @@ li:before {
         display: block;
         visibility: visible;
         position: fixed;
-        /* calc value adjusted to match number of menu items */
-        top: calc(-13.5rem - 1px);
+        top: 0;
         right: 0;
         width: 100vw;
+    }
+
+    /* links fold to zero height when closed, so link count never matters */
+    #menu a:not(#hamburger, .close) {
+        line-height: 1.2rem;
+        max-height: 0;
+        padding-block: 0;
+        overflow: hidden;
         transition: 300ms all ease-in-out;
     }
 
-    #menu:target {
-        top: 0.0rem;
+    #menu:target a:not(#hamburger, .close) {
+        max-height: 1.2rem;
+        padding-block: 0.5rem;
     }
     
     #menu:target #hamburger {
