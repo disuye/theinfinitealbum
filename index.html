@@ -8,7 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/video.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/font-face.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/nlysr.css">
 	<script src="./assets/js/video.js" defer></script>
+	<script type="module" src="./assets/js/nlysr/main.js"></script>
 </head>
 <body>
 
@@ -20,7 +22,7 @@
 	<div id="menu">
 	<a class="bracket" href="#about-show" onClick="anchorFunction('about-top')">About</a>
 	<a class="bracket" href="#livestream-show" onClick="anchorFunction('livestream-top')">Livestream</a>
-	<!-- <a class="bracket" href="#stats-show" onClick="anchorFunction('stats-top')">Stats</a> -->
+	<a class="bracket" href="#stats-show" onClick="anchorFunction('stats-top')">Stats</a>
 	<a class="bracket" href="#ideas-show" onClick="anchorFunction('ideas-top')">Ideas</a>
 	<a class="bracket" href="#albums-show" onClick="anchorFunction('albums-top')">Albums</a>
 	<a class="bracket" href="#contact-show" onClick="anchorFunction('contact-top')">Contact</a>
@@ -170,9 +172,8 @@
 	<a class="close" href="#"></a>
 	<div id="stats-top" class="show-bg"></div>
 	<h1>Stats</h1>
-	<div class="show-text">
-		<span>test content</span>
-		<div class="spacer"></div>
+	<div class="show-text" id="nlysr">
+		<noscript><span>Stats need JavaScript.</span></noscript>
 	</div>
 </div>
 

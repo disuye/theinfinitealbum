@@ -1,0 +1,160 @@
+/* NLYSR stats panel (#stats-show). Page-only additions to style.css. */
+
+:root {
+	--nlysr-fg: rgba(255, 255, 255, 0.8);
+	--nlysr-dim: rgba(255, 255, 255, 0.28);
+	--nlysr-track: rgba(48, 48, 48, 0.6);
+	--nlysr-ledger: rgba(48, 48, 48, 0.4);
+	--nlysr-empty: #161616;
+	--nlysr-accent: #ff4b3a;
+}
+
+/* Unloaded sections take space so only the ones near view intersect and fetch. */
+.nlysr-section:not(.ready) { min-height: 60vh; }
+
+.nlysr-section h3 {
+	font-size: 1.2rem;
+	padding: 1rem 0 0 1rem;
+	border-left: 1rem solid var(--nlysr-ledger);
+}
+
+/* Every block that isn't a site paragraph still sits on the ledger margin. */
+.nlysr-stats,
+.nlysr-fig,
+.nlysr-grid,
+.nlysr-hbars,
+.nlysr-poem,
+.nlysr-data,
+.nlysr-timeline,
+.nlysr-swatches {
+	display: block;
+	margin: 0;
+	padding: 0.75rem 1rem;
+	border-left: 1rem solid var(--nlysr-ledger);
+	font-weight: 200;
+	font-size: calc(0.7rem + 0.3vh);
+	overflow: visible;
+}
+
+/* Headline strip */
+.nlysr-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(6.5rem, 40%), 1fr));
+	gap: 1rem;
+}
+.nlysr-stats b {
+	display: block;
+	font-family: "Unica One", sans-serif;
+	font-weight: 400;
+	font-size: 1.8rem;
+	color: var(--id-color);
+	line-height: 1.1;
+}
+.nlysr-stats small { display: block; opacity: 0.7; }
+
+/* Charts */
+.nlysr-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.nlysr-svg .bar { fill: var(--nlysr-fg); }
+.nlysr-svg .bar.dim { fill: var(--nlysr-dim); }
+.nlysr-svg .expected,
+.nlysr-svg .line,
+.nlysr-svg .grid {
+	fill: none;
+	stroke: var(--nlysr-fg);
+	stroke-width: 1;
+	vector-effect: non-scaling-stroke;
+}
+.nlysr-svg .line { stroke-width: 1.5; }
+.nlysr-svg .line.dim { stroke: var(--nlysr-dim); }
+.nlysr-svg .grid { stroke: var(--nlysr-track); stroke-dasharray: 2 3; }
+.nlysr-svg.heatmap { height: 6rem; background: var(--nlysr-empty); }
+.nlysr-svg.heatmap .on { fill: var(--nlysr-fg); }
+.nlysr-svg.heatmap .off { fill: var(--nlysr-empty); }
+
+.nlysr-fig figcaption { padding-top: 0.25rem; opacity: 0.8; }
+.nlysr-axis {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+	opacity: 0.6;
+	font-size: 80%;
+	padding-top: 0.2rem;
+}
+.nlysr-axis i { font-style: normal; }
+
+/* Small multiples: nested figures drop their own ledger */
+.nlysr-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.25rem 1.5rem;
+}
+.nlysr-grid .nlysr-fig { padding: 0; border: 0; font-size: inherit; }
+
+/* Horizontal bars */
+.hbar + .hbar { margin-top: 0.6rem; }
+.hbar-label { display: flex; justify-content: space-between; gap: 1rem; }
+.hbar-label b { flex: none; font-weight: 300; white-space: nowrap; color: var(--id-color); }
+.hbar-track { height: 4px; margin-top: 2px; background: var(--nlysr-track); }
+.hbar-fill { height: 100%; background: var(--nlysr-fg); }
+.hbar-fill.dim { background: var(--nlysr-dim); }
+
+/* never_played, set as verse */
+.nlysr-poem {
+	font-style: italic;
+	line-height: 1.7;
+	padding-left: 3rem;
+	color: var(--id-color);
+}
+
+/* Table fallbacks */
+.nlysr-data summary { cursor: pointer; opacity: 0.6; }
+.nlysr-data summary:hover { opacity: 1; }
+.nlysr-data table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 85%; }
+.nlysr-data th,
+.nlysr-data td { padding: 0.2rem 0.75rem 0.2rem 0; text-align: left; font-weight: 200; }
+.nlysr-data th { color: var(--id-color); font-weight: 300; }
+.nlysr-data .num { text-align: right; white-space: nowrap; }
+.nlysr-data tbody tr:nth-child(odd) { background: rgba(255, 255, 255, 0.03); }
+.nlysr-data { overflow-x: auto; }
+
+/* Sessions timeline: one strip per month */
+.tl-row { display: grid; grid-template-columns: 2.5rem 1fr; align-items: center; gap: 0.5rem; }
+.tl-row + .tl-row { margin-top: 3px; }
+.tl-row > i { font-style: normal; opacity: 0.6; }
+.nlysr-svg.strip { shape-rendering: crispEdges; height: 0.9rem; background: var(--nlysr-track); }
+.nlysr-svg .crash { fill: var(--nlysr-accent); }
+
+@media (prefers-reduced-motion: no-preference) {
+	.nlysr-svg .live { animation: nlysr-pulse 2s ease-in-out infinite; }
+}
+@keyframes nlysr-pulse { 50% { opacity: 0.35; } }
+
+/* Palette swatches */
+.nlysr-swatches {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+	gap: 0.75rem;
+}
+.swatch i { display: block; height: 1.25rem; border-radius: 2px; background: var(--pal-g); }
+.swatch small { display: block; padding-top: 0.2rem; }
+.nlysr-svg .pal { fill: var(--pal-a, var(--nlysr-fg)); }
+
+/* Approximations of ffmpeg showspectrum colour maps: --pal-a = solid, --pal-g = gradient */
+.pal-fire     { --pal-a: #f06010; --pal-g: linear-gradient(90deg, #000, #a00, #f60, #ff0, #fff); }
+.pal-fiery    { --pal-a: #e8401c; --pal-g: linear-gradient(90deg, #100, #c10, #f50, #fb0); }
+.pal-nebulae  { --pal-a: #9a5fd0; --pal-g: linear-gradient(90deg, #08001a, #3a1a8a, #b04fc0, #ffd0f0); }
+.pal-viridis  { --pal-a: #21918c; --pal-g: linear-gradient(90deg, #440154, #3b528b, #21918c, #5ec962, #fde725); }
+.pal-magma    { --pal-a: #b73779; --pal-g: linear-gradient(90deg, #000004, #51127c, #b73779, #fc8961, #fcfdbf); }
+.pal-plasma   { --pal-a: #cc4778; --pal-g: linear-gradient(90deg, #0d0887, #7e03a8, #cc4778, #f89540, #f0f921); }
+.pal-cividis  { --pal-a: #7c7b78; --pal-g: linear-gradient(90deg, #00204c, #414d6b, #7c7b78, #bcaf6f, #ffe945); }
+.pal-terrain  { --pal-a: #3aa860; --pal-g: linear-gradient(90deg, #333399, #0099cc, #00cc66, #ffff99, #996633, #fff); }
+.pal-moreland { --pal-a: #8aa8e8; --pal-g: linear-gradient(90deg, #3b4cc0, #8aa8e8, #ddd, #f09070, #b40426); }
+.pal-green    { --pal-a: #2fbf60; --pal-g: linear-gradient(90deg, #000, #064, #2fbf60, #cfc); }
+.pal-cool     { --pal-a: #80a0ff; --pal-g: linear-gradient(90deg, #0ff, #80a0ff, #f0f); }
+.pal-fruit    { --pal-a: #c0c020; --pal-g: linear-gradient(90deg, #003, #0a5, #cc2, #f50); }
+
+@media (max-width: 40rem) {
+	.nlysr-grid { grid-template-columns: 1fr; }
+	.nlysr-stats b { font-size: 1.5rem; }
+	.nlysr-poem { padding-left: 1.5rem; }
+}
