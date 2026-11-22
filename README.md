@@ -17,3 +17,16 @@ Inspired by Dadaism, Pratītyasamutpāda, Amplituhedron, cut-up and dub: Hoping 
 This exists, then that exists. Emergent. Enjoy!
 
 No AIs were used nor harmed in the making of this broadcast.
+
+# NLYSR (Analyser)
+
+Python based analysis of SMPLR's log & recipe files, macOS launchd (chron job) at 05:30 daily on the SMPLR server.
+
+Private repo: https://github.com/disuye/SMPLR-NLYSR pushes JSON data to... 
+
+http://www.theinfinitealbum/NLYSR/daily.json
+http://www.theinfinitealbum/NLYSR/distributions.json
+http://www.theinfinitealbum/NLYSR/graph.json
+http://www.theinfinitealbum/NLYSR/samples.json
+http://www.theinfinitealbum/NLYSR/sessions.json
+http://www.theinfinitealbum/NLYSR/summary.json
