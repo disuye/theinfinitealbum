@@ -22,11 +22,4 @@ No AIs were used nor harmed in the making of this broadcast.
 
 Python based analysis of SMPLR's log & recipe files, macOS launchd (chron job) at 05:30 daily on the SMPLR server.
 
-Private repo: https://github.com/disuye/SMPLR-NLYSR pushes JSON data to... 
-
-- http://www.theinfinitealbum.com/NLYSR/daily.json
-- http://www.theinfinitealbum.com/NLYSR/distributions.json
-- http://www.theinfinitealbum.com/NLYSR/graph.json
-- http://www.theinfinitealbum.com/NLYSR/samples.json
-- http://www.theinfinitealbum.com/NLYSR/sessions.json
-- http://www.theinfinitealbum.com/NLYSR/summary.json
+Private repo: https://github.com/disuye/SMPLR-NLYSR pushes public JSON data to http://www.theinfinitealbum.com/NLYSR/
