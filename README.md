@@ -1,12 +1,14 @@
 # The Infinite Album
 
-Landing page for SMPLR "The Inifinite Album"
+Landing page for SMPLR "The Infinite Album"
 
 www.theinfinitealbum.com
 
+```
 https://youtube.com/@theinfinitealbum
 https://instagram.com/theinfinitealbum
 https://smplr.bandcamp.com
+```
 
 # About SMPLR
 
@@ -24,9 +26,11 @@ Python based analysis of SMPLR's log & recipe files, macOS launchd (chron job) a
 
 Private repo: https://github.com/disuye/SMPLR-NLYSR pushes JSON data to... 
 
+```
 http://www.theinfinitealbum/NLYSR/daily.json
 http://www.theinfinitealbum/NLYSR/distributions.json
 http://www.theinfinitealbum/NLYSR/graph.json
 http://www.theinfinitealbum/NLYSR/samples.json
 http://www.theinfinitealbum/NLYSR/sessions.json
 http://www.theinfinitealbum/NLYSR/summary.json
+```
